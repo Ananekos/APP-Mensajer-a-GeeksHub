@@ -1,5 +1,5 @@
 Instrucciones de Configuración
--
+(No hay)
 Instrucciones de Instalación
 -
 CASO PRÁCTICO
@@ -34,3 +34,4 @@ Creative Commons Zero v1.0 Universal
 -
 Créditos, información de contacto
 Ana Fernández Fernández
+https://github.com/Ananekos
