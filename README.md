@@ -30,6 +30,7 @@ tiempo.
 un buscador global.
 
 Copyright y licencia
+Creative Commons Zero v1.0 Universal
 -
 Créditos, información de contacto
 Ana Fernández Fernández
