@@ -1,7 +1,7 @@
 Instrucciones de Configuración
-(No hay)
+
 Instrucciones de Instalación
--
+
 CASO PRÁCTICO
 
 La empresa para la que trabajas se encuentra en un momento de
