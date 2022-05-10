@@ -1,0 +1,186 @@
+
+#contenedor_general {
+    max-width: auto;
+    min-height: auto;
+    display: flex;
+    margin:auto
+}
+#bloque_izq {
+    padding-left:30px;
+    color: white;
+    height: auto;
+    min-height: 400px;
+    min-width: 350px;
+    background-color: rgb(35, 65, 117);
+    flex:1
+}
+
+#bloque_der {
+    padding-left:50px;
+    color: white;
+    height: auto;
+    min-height: 400px;
+    min-width: 500px;
+    background-color:white;
+    flex:4
+}
+
+#nombreapp {
+    padding-top: 20px;
+    padding-bottom: 8px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif
+    
+}
+
+.tableuser {
+    text-align:center;
+    margin-top: 5px;
+}
+
+#username {
+    margin-left: 5px;
+}
+
+.circulo_verde {
+    width: 12px;
+    height: 12px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #5cb85c;
+}
+
+.circulo_ausente {
+    width: 10px;
+    height: 10px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: rgb(35, 65, 117);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.icono_campana {
+    width: 30px;
+    float: right;
+    margin-right: 30px;
+}
+
+.icono_mas {
+    width: 25px;
+    float: right;
+    margin-right: 30px;
+}
+
+.lineaazul {
+    height: 0.1px;
+    background-color:rgb(35, 65, 117);
+    border-color:rgb(35, 65, 117); ;
+    
+  }
+
+.lineagris {
+    height: 0.1px;
+    background-color:rgb(238, 238, 238);
+    border-color:rgb(238, 238, 238);
+    
+  }
+
+.boton_busqueda{
+    border: 1px solid #bebebe;
+    border-radius: 15px;
+    float: right;
+    width: 200px;
+    height: 30px;
+    align-items: center;
+	padding: 7px;
+}
+.boton_busqueda > i {
+
+	font-size: 20px;
+	color: #777;
+}
+
+.boton_busqueda > .inputsearch {
+	flex: 1;
+	height: 30px;
+    width: 150px;
+	border: none;
+	outline: none;
+	font-size: 18px;
+	padding-left: 10px;
+}
+
+#ventanamsg {
+    background-color: white;
+    width: auto;
+    height: 750px;
+}
+
+.campotxt {
+    border: 1px solid #bebebe;
+    border-radius: 15px;
+    width: auto;
+    height: 30px;
+    align-items: center;
+	padding: 7px;
+}
+.campotxt > i {
+
+	font-size: 15px;
+	color: #777;
+    padding-left: 5px;
+}
+
+.campotxt > .inputtxt{
+	flex: 1;
+	height: 30px;
+    width: 150px;
+	border: none;
+	outline: none;
+	font-size: 18px;
+	padding-left: 10px;
+}
+
+
+
+
+
+
+
+
+.h1 {
+    padding-top: 50px;
+    font-weight: bold;
+    font-size: 21px;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+.h2 {
+    color: rgb(160, 193, 250);
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+.h3 {
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+.t1 {
+    color: black;
+    font-weight: bold;
+    font-size: 21px;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+.t4 {
+    padding-top: 8px;
+    color: rgb(147, 147, 147);
+    font-size: 14px;
+    font-family:Arial, Helvetica, sans-serif
+    
+}
+
