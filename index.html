@@ -3,85 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto GeeksHubs</title>
+    <meta name="viewport" content="width=, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    <title>App GeeksHubs</title>
 </head>
 <body>
 
-<div id="contenedor_general">
-    <div id="bloque_izq"> 
-        <div id="nombreapp"> Reto GeeksHubs <img src="img/campana.png" class="icono_campana"> </div>
-        <table class="tableuser">
-            <tr>
-            <td> <div class="circulo_verde"></div> </td>
-            <td> <div id="username" class="h2"> Alumno@BTC </div> </td>
-        </tr>
-        </table>
-
-        <div id="channels" class="h1"> Channels <button class="boton_mas"><img src="img/mas.png" class="icono_mas"></button></div>
-        <br>
-        <div id="nombrecanal" class="h3">
-            <button type="text" class="boton_canal"> <div class="txt_agregar_canal"> + Agregar canal </div> </button>
-        </div>
-        <br>
-        <hr class="lineaazul">
-        <div id="messages" class="h1"> Messages <button class="boton_mas"><img src="img/mas.png" class="icono_mas"></button></div>
-        <br>
-         <table class="tableuser">
-            <tr>
-                <td> <div class="circulo_verde"></div> </td>
-                <td> <div id="username" class="h3">Olivia Montes</div> </td>
-            </tr>
-        </table>
-
-        <table class="tableuser">
-            <tr>
-              <td> <div class="circulo_ausente"></div> </td>
-              <td> <div id="username" class="h3">Javier Cuenca</div> </td>
-            </tr>
-        </table>
-
-        <table class="tableuser">
-            <tr>
-              <td> <div class="circulo_verde"></div> </td>
-              <td> <div id="username" class="h3">Isabel Carballo</div> </td>
-            </tr>
-        </table>
-
-        <table class="tableuser">
-            <tr>
-              <td> <div class="circulo_verde"></div> </td>
-              <td> <div id="username" class="h3">Peter Griffin</div> </td>
-            </tr>
-        </table>
-
-        <div id="apps" class="h1"> Apps <button class="boton_mas"><img src="img/mas.png" class="icono_mas"></button></div>
-    </div>
-
-    <div id="bloque_der">
-        <hr class="lineagris">
-        <div class="box"></div>
-        <div id="nombrecanal" class="t1"> # general
-            
-            <div class="barra_busqueda">
-                <button class="button_search"><i class="fa fa-search" aria-hidden="true"></i></button>
-                <input type="text" class="inputsearch">
+    <div id="cont_general">
+        <div id="cont_izq">
+            <div class="cont_reto"> <h1>Reto GeeksHubs</h1>
+                <table class="tabla_usuario">
+                <tr>
+                    <td> <div class="circulo_verde"></div> </td>
+                    <td> <div> <h4>Alumno@BTC</h4></div></td>
+                </tr>
+                </table>
             </div>
+            <div class="cont_channels"><h2>Channels<button class="btn_añadir_canales"><i class="fa fa-plus-circle" aria-hidden="true"></i></button></h2>
+                <div class="lista_canales"><h2>Array canales</h2></div>
+                <hr>
+            </div>
+            <div class="cont_messages"><h2>Direct messages<button class="btn_añadir_mensajes"><i class="fa fa-plus-circle" aria-hidden="true"></i></button></h2>
+                <table class="tabla_usuario">
+                    <tr>
+                        <td> <div class="circulo_verde"></div> </td>
+                        <td> <div> <h3>Olivia Montes</h3></div></td>
+                    </tr>
+                    </table>
+                    <table class="tabla_usuario">
+                        <tr>
+                            <td> <div class="circulo_verde"></div> </td>
+                            <td> <div> <h3>Isabel Carballo</h3></div></td>
+                        </tr>
+                        </table>
+                        <table class="tabla_usuario">
+                            <tr>
+                                <td> <div class="circulo_ausente"></div> </td>
+                                <td> <div> <h3>Javier Cuenca</h3></div></td>
+                            </tr>
+                            </table>
+                            <table class="tabla_usuario">
+                                <tr>
+                                    <td> <div class="circulo_verde"></div> </td>
+                                    <td> <div> <h3>Peter Griffin</h3></div></td>
+                                </tr>
+                                </table>
+                                <hr>
+            </div>
+            
+            <div class="cont_apps"><h2>Apps<button class="btn_añadir_apps"><i class="fa fa-plus-circle" aria-hidden="true"></i></button></h2></div>
         </div>
-        <div class="t4"> Tú, Olivia Montes, Peter Griffin </div>
-        <hr class="lineagris">
-        <div id="ventanamsg"></div>
-        <div class="campotxt">
-            <i class="fa fa-plus" aria-hidden="true"></i>
-            <input type="text" class="inputtxt">
+        <div id="cont_der">
+            <div class="cont_top">
+                <hr class="linea_gris">
+                <div class="cont_participantes"> <d1>Nombre del canal</d1> 
+                    <div class="barra_busqueda">
+                        <button class="boton_busqueda"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        <input type="text" class="input_busqueda">
+                    </div>
+                    <br><d4>Participantes</d4>
+                <hr class="linea_gris_2">
+                </div>
+                
+            </div>
+            <div class="cont_enviado"></div>
+            <div class="cont_bottom">
+                <div class="barra_input_txt">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                    <input type="text" class="inputtxt">
+                </div>
+            </div>     
         </div>
-        
     </div>
-
-</div>
     
 </body>
 </html>

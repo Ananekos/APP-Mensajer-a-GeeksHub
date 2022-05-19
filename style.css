@@ -1,46 +1,82 @@
-
-#contenedor_general {
-    max-width: auto;
-    min-height: auto;
+#cont_general {
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 96%;
     display: flex;
-    margin:auto
+    justify-content: center;
 }
-#bloque_izq {
-    padding-left:30px;
-    color: white;
-    height: auto;
-    min-height: 400px;
+
+#cont_izq {
+    background-color: rgb(9, 38, 75);
+    margin-top: 8px;
+    float: left;
+    height: 100%;
+    width: 400px;
     min-width: 350px;
-    background-color: rgb(35, 65, 117);
-    flex:1
 }
 
-#bloque_der {
-    padding-left:50px;
-    color: white;
-    height: auto;
-    min-height: 400px;
+#cont_der {
+    background-color: rgb(255, 255, 255);
+    float: left;
+    height: 100%;
+    width: 1200px;
     min-width: 500px;
-    background-color:white;
-    flex:4
+    position: relative;
 }
 
-#nombreapp {
-    padding-top: 20px;
-    padding-bottom: 8px;
-    font-size: 25px;
-    font-weight: bold;
-    font-family:Arial, Helvetica, sans-serif
+.btn_añadir_canales {
+    float:right;
+    margin-right: 30px;
+    cursor:pointer;
+    border:none;
+    background-color:rgb(9, 38, 75);
+    font-size: 20px;
+    color:white   
 }
 
-.tableuser {
-    text-align:center;
-    margin-top: 5px;
+.btn_añadir_mensajes {
+    float:right;
+    margin-right: 30px;
+    cursor:pointer;
+    border:none;
+    background-color:rgb(9, 38, 75);
+    font-size: 20px;
+    color:white   
 }
 
-#username {
-    margin-left: 5px;
+.btn_añadir_apps {
+    float:right;
+    margin-right: 30px;
+    cursor:pointer;
+    border:none;
+    background-color:rgb(9, 38, 75);
+    font-size: 20px;
+    color:white   
 }
+
+.cont_top{
+    align-items: center;
+}
+
+hr {
+    border: none; 
+    height: 1px; 
+    background:rgb(58, 70, 124);
+}
+
+.linea_gris {
+    border: none; 
+    height: 1px; 
+    background:rgb(189, 189, 189);
+  }
+
+.linea_gris_2 {
+    border: none; 
+    height: 1px; 
+    background:rgb(189, 189, 189);
+    margin-top: 13px;
+  }
 
 .circulo_verde {
     width: 12px;
@@ -48,7 +84,7 @@
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
-    background: #5cb85c;
+    background: #21c921;
 }
 
 .circulo_ausente {
@@ -61,66 +97,6 @@
     border: 1px solid rgb(255, 255, 255);
 }
 
-.icono_campana {
-    width: 30px;
-    float: right;
-    margin-right: 30px;
-}
-
-.txt_agregar_canal{
-    float:left;
-    color:white;
-    font-size: 15px;
-    font-style: italic;
-}
-
-.boton_mas  {
-    background-color: rgb(35, 65, 117);
-    width: 30px;
-    border: none;
-    float:right;
-    padding-right: 60px;
-    cursor:pointer;
-    
-}
-
-.boton_mas > .icono_mas {
-    background-color: rgb(35, 65, 117);
-    width: 25px;
-    border: none;  
-}
-
-.boton_canal {
-    background-color: rgb(35, 65, 117);
-    border: none;
-    width: 100%;
-    height: 30px;
-    transition: background-color .5s;
-}
-
-.boton_canal:hover {
-    background-color: rgb(64, 97, 155);
-}
-
-.txt_agregar_canal{
-    float:left;
-    color:white;
-    font-size: 15px;
-    font-style: italic;
-}
-
-.lineaazul {
-    height: 0.1px;
-    background-color:rgb(35, 65, 117);
-    border-color:rgb(35, 65, 117); ;
-  }
-
-.lineagris {
-    height: 0.1px;
-    background-color:rgb(238, 238, 238);
-    border-color:rgb(238, 238, 238);
-  }
-  
 .barra_busqueda{
     border: 1px solid #bebebe;
     border-radius: 15px;
@@ -129,26 +105,24 @@
     height: 30px;
     align-items: center;
     padding:7px;
-
 }
 
-.button_search {
+.boton_busqueda {
 	background-color: #ffffff;
     align-items: center;
     width: 30px;
     height: 30px;
     border:none;
     cursor:pointer;
-
+    float: left;
 }
 
-.button_search > i {
+.boton_busqueda > i {
 	font-size: 20px;
 	color: #777;
 }
 
-
-.inputsearch {
+.input_busqueda {
 	flex: 1;
 	height: 30px;
     width: 150px;
@@ -158,66 +132,98 @@
 	padding-left: 10px;
 }
 
-#ventanamsg {
-    background-color: white;
-    width: auto;
-    height: 750px;
+.cont_bottom {
+    padding-left: 30px;
+    width: 96%;
+    height: 32px;
+    padding-bottom: 30px;
+    background-color:white;
 }
 
-.campotxt {
+.barra_input_txt {
     border: 1px solid #bebebe;
     border-radius: 15px;
-    width: auto;
     height: 30px;
     align-items: center;
 	padding: 7px;
+    width: 100%;
+
 }
-.campotxt > i {
+.barra_input_txt > i {
 	font-size: 15px;
 	color: #777;
-    padding-left: 5px;
-}
+    padding: 7px;
 
+}
 .inputtxt{
-	flex: 1;
-	height: 30px;
-    width: 95%;
 	border: none;
 	outline: none;
 	font-size: 18px;
+    width: 94%;
 	padding-left: 10px;
-    background-color: white;
+    background-color: whie;
 }
 
-.h1 {
-    padding-top: 50px;
-    font-weight: bold;
-    font-size: 21px;
-    font-family:Arial, Helvetica, sans-serif
+.cont_enviado{
+    font-size: 40px;
+    width: 100%;
+    height: 91%;
+    background-color: aquamarine;
+    }
+
+/* Estilos Tipografías */
+
+h1 {
+  color:white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:20px;
+  margin-left:30px;
+  margin-top: 30px;
+  margin-bottom: 2px;
 }
 
-.h2 {
-    color: rgb(160, 193, 250);
+h2 {
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    margin-left:30px;
+}
+
+h3 {
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
-    font-family:Arial, Helvetica, sans-serif
+    font-weight: lighter;
+    padding-left: 5px;
+    
 }
 
-.h3 {
-    font-size: 18px;
-    font-family:Arial, Helvetica, sans-serif
+h4 {
+    color:rgb(207, 207, 207);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: lighter;
+    padding-left: 5px;
+    
 }
 
-.t1 {
-    color: black;
-    font-weight: bold;
-    font-size: 21px;
-    font-family:Arial, Helvetica, sans-serif
+d1 {
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-left:30px;
+  }
+
+d4 {
+    color:rgb(85, 85, 85);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight:lighter;
+    margin-left:30px;
+    
 }
 
-.t4 {
-    padding-top: 8px;
-    color: rgb(147, 147, 147);
-    font-size: 14px;
-    font-family:Arial, Helvetica, sans-serif
+.tabla_usuario{
+    padding-left: 30px;
 }
-
