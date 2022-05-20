@@ -35,6 +35,10 @@
     color:white   
 }
 
+.listaCanales{
+    font-size: 30px;
+}
+
 .btn_añadir_mensajes {
     float:right;
     margin-right: 30px;
@@ -228,4 +232,17 @@ d4 {
 
 .tabla_usuario{
     padding-left: 30px;
+}
+
+li {
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+    margin-left: -9px;
+    line-height: 30px;
+}
+
+ul {
+    list-style: none;
 }
