@@ -67,12 +67,24 @@
                 </div>
                 
             </div>
-            <div class="cont_enviado"></div>
-            <div class="cont_bottom">
-                <div class="barra_input_txt">
-                    <i class="fa fa-plus" aria-hidden="true"></i>
-                    <input type="text" class="inputtxt">
+            <div class="message-area" id="message-area">
+                <div class="message-box others-message-box">
+                    <div class="message others-message"> Hi, How are you? </div>
+                    <div class="separator"></div>
                 </div>
+                
+                <div class="message-box my-message-box">
+                    <div class="nombre_usuario"> <d5>Alumno@BTC</d5></div> <br>
+                    <div class="message my-message"> I am good, how are you doing? </div>
+                    <div class="separator"></div>
+                </div>
+                <div class="cont_bottom">
+                    <div class="typing-area">
+                        <button class="send-button" onclick="sendMessage()"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                        <textarea class="typing-box" id="typing-box"></textarea>
+                    </div>
+            </div>
+            
             </div>     
         </div>
     </div>

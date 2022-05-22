@@ -1,13 +1,10 @@
 const btnAñadirCanales = document.querySelector(".btn_añadir_canales");
-const btnAñadirMensaje = document.querySelector(".btn_añadir_canales");
-var arrCanales = [];
-
-
+let arrCanales = [];
 
 btnAñadirCanales.addEventListener("click", function (evento){
     arrCanales.push(prompt("Nombre del nuevo canal:"));
-    var lista = document.createElement("li");
-    for (var i =0; i<arrCanales.length; i++){
+    let lista = document.createElement("li");
+    for (let i =0; i<arrCanales.length; i++){
         console.log('arrayCanales', arrCanales);
         nuevoItem = arrCanales[i];
         lista.innerHTML = nuevoItem;
@@ -16,3 +13,16 @@ btnAñadirCanales.addEventListener("click", function (evento){
     }
 });
 
+
+function sendMessage() {
+  var message = document.getElementById("typing-box").value;
+  var html = '<div class="nombre_usuario"> Alumno@BTC </div>' +
+        '<div class="message-box my-message-box">' +
+        '<div class="message my-message"> ' + message + ' </div>' +
+        '<div class="separator"></div>' +
+        '</div>';
+        
+  document.getElementById("message-area").innerHTML += html;
+  document.getElementById("typing-box").value = "";
+  
+}
