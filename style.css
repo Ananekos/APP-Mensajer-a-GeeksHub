@@ -136,6 +136,21 @@ hr {
 	padding-left: 10px;
 }
 
+.btn_plus {
+	background-color: #ffffff;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border:none;
+    cursor:pointer;
+    float: left;
+}
+
+.btn_plus > i {
+	font-size: 20px;
+	color: #777;
+}
+
 .cont_bottom {
     padding-left: 30px;
     width: 96%;
