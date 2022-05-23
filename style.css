@@ -189,11 +189,15 @@ hr {
     margin-top: 5px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
-    color: rgb(80, 80, 80);
+    color: rgb(9, 38, 75);
 }
 
 .others-message-box {
     padding: 30px;
+    
+}
+.message-area {
+    padding-top: 30px;
     
 }
 
@@ -201,7 +205,7 @@ hr {
     text-align: right;
     background: white;
     padding-left: 30px;
-    padding-top: -10px;
+    padding-top: 6px;
     align-items: center;
 }
 
@@ -210,8 +214,7 @@ hr {
     width: 90%;
     border-radius: 5%;
     margin-top: -4px;
-    margin-bottom: 12px;
-
+    margin-bottom: 20px;
 }
 
 .my-message {
@@ -230,6 +233,7 @@ hr {
     float: left;
     color: #21c921;
 }
+
 
 /* Estilos Tipografías */
 
@@ -274,8 +278,8 @@ d1 {
     font-weight: bolder;
     margin-left:30px;
   }
-
-  d2 {
+  
+d2 {
     color:black;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
@@ -283,6 +287,12 @@ d1 {
     margin-left:30px;
   }
 
+d3 {
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    
+  }
 
 d4 {
     color:rgb(85, 85, 85);
@@ -292,6 +302,13 @@ d4 {
     margin-left:30px;
     
 }
+
+d5 {
+    color:rgb(138, 138, 138);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    
+  }
 
 .tabla_usuario{
     padding-left: 30px;
