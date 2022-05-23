@@ -16,7 +16,7 @@
                 <table class="tabla_usuario">
                 <tr>
                     <td> <div class="circulo_verde"></div> </td>
-                    <td> <div> <h4>Alumno@BTC</h4></div></td>
+                    <td> <div> <h4>Alumno@ BTC</h4></div></td>
                 </tr>
                 </table>
             </div>
@@ -67,12 +67,36 @@
                 </div>
                 
             </div>
-            <div class="cont_enviado"></div>
-            <div class="cont_bottom">
-                <div class="barra_input_txt">
-                    <i class="fa fa-plus" aria-hidden="true"></i>
-                    <input type="text" class="inputtxt">
+            <div class="message-area" id="message-area">
+                <div id="nom_usuario" hidden> <d2>Alumno@ BTC</d2></div>
+                <div class="fecha">
+                    <p id="diaSemana" class="diaSemana"></p>
+                    <p id="dia" class="dia"></p>
+                    <p>de</p>
+                    <p id="mes" class="mes"></p>
+                    <p>del</p>
+                    <p id="year" class="year"></p>
+                
+                
                 </div>
+                <!-- <div class="message-box others-message-box">
+                    <div class="message others-message"> Hi, How are you? </div>
+                    <div class="separator"></div>
+                </div>
+                
+                <div class="message-box my-message-box">
+                    
+                    <div class="message my-message"> I am good, how are you doing? </div>
+                    <div class="separator"></div>
+                </div> -->
+            </div>
+                <div class="cont_bottom">
+                    <div class="typing-area">
+                        <button class="send-button" onclick="sendMessage()"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                        <textarea class="typing-box" id="typing-box"></textarea>
+                    </div>
+            </div>
+            
             </div>     
         </div>
     </div>
