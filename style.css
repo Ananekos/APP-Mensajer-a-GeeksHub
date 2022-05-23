@@ -196,14 +196,10 @@ hr {
     padding: 30px;
     
 }
-.message-area {
-    padding-top: 30px;
-    
-}
 
 .my-message-box {
     text-align: right;
-    background: white;
+    background: rgb(255, 255, 255);
     padding-left: 30px;
     padding-top: 6px;
     align-items: center;
@@ -211,7 +207,7 @@ hr {
 
 .message {
     text-align: left;
-    width: 90%;
+    width: 100%;
     border-radius: 5%;
     margin-top: -4px;
     margin-bottom: 20px;
