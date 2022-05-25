@@ -1,3 +1,5 @@
+
+
 const btnAñadirCanales = document.querySelector(".btn_añadir_canales");
 let arrCanales = [];
 
@@ -17,7 +19,7 @@ let mesesDelAño = ["Enero", "Febrero", "Marzo","Abril","Mayo","Junio","Julio","
 
 
 
-(function () {
+(function relojPrincipal() {
 
   var actualizarHora =function(){
       fecha = new Date(),
@@ -29,27 +31,27 @@ let mesesDelAño = ["Enero", "Febrero", "Marzo","Abril","Mayo","Junio","Julio","
       year = fecha.getFullYear(),
 
   
-      phoras = document.getElementById ("horas").textContent=horas,
-      pminutos = document.getElementById ("minutos").textContent=minutos,
-      psegundos = document.getElementById ("segundos").textContent=segundos,
-      pdia = document.getElementById ("dia").textContent=dia,
-      pmes = document.getElementById ("mes").textContent=mesesDelAño[mes],
-      pyear = document.getElementById ("year").textContent=year
+      phoras = document.getElementById ("horas").innerHTML=horas,
+      pminutos = document.getElementById ("minutos").innerHTML=minutos,
+      psegundos = document.getElementById ("segundos").innerHTML=segundos,
+      pdia = document.getElementById ("dia").innerHTML=dia,
+      pmes = document.getElementById ("mes").innerHTML=mesesDelAño[mes],
+      pyear = document.getElementById ("year").innerHTML=year,
     
       
-      pdia.textContent = dia;
+      pdia.innerHTML = dia,
 
-      pmes.textContent = mesesDelAño [mes];
+      pmes.innerHTML = mesesDelAño [mes],
 
-      pyear.textContent = year;
+      pyear.innerHTML = year;
 
-      if (horas < 10) {horas = "0" + horas};
-      if (minutos < 10) {minutos = "0" + minutos};
-      if (segundos < 10) {segundos = "0" + segundos};
+      if (phoras < 10) {phoras = "0" + phoras};
+      if (pminutos < 10) {pminutos = "0" + pminutos};
+      if (psegundos < 10) {psegundos = "0" + psegundos};
 
-      phoras.textContent = horas;
-      pminutos.textContent = minutos;
-      psegundos.textContent = segundos;
+      phoras.innerHTML = horas;
+      pminutos.innerHTML = minutos;
+      psegundos.innerHTML = segundos;
 
   };
 
@@ -63,14 +65,16 @@ var nombreUsuario = document.getElementById("nom_usuario").innerHTML;
 
 
 function sendMessage() {
-  var message = document.getElementById("typing-box").value;
-  var html = nombreUsuario +
 
+  var message = document.getElementById("typing-box").value;
+  var reloj = (" "+ phoras + ":" + pminutos + ":" + psegundos + " | " + pdia + " de " + pmes + " del " + pyear);
+  var html = nombreUsuario + reloj +
         '<div class="message-box my-message-box">' +
         '<div class="message my-message"> ' + message + ' </div>' +
         '<div class="separator"></div>'
 
   document.getElementById("message-area").innerHTML += html;
   document.getElementById("typing-box").value = "";
+
   
 }
