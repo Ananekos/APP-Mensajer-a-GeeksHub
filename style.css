@@ -140,7 +140,7 @@ hr {
     padding-left: 30px;
 }
 
-.send-button {
+.boton_enviar {
 	background-color: #ffffff;
     align-items: center;
     width: 30px;
@@ -150,13 +150,13 @@ hr {
     float: left;
 }
 
-.send-button > i {
+.boton_enviar > i {
 	font-size: 20px;
 	color: #777;
 }
 
 
-.typing-area {
+.area_escritura {
     border: 1px solid #bebebe;
     border-radius: 15px;
     height: 30px;
@@ -167,13 +167,13 @@ hr {
     bottom:0;
 
 }
-.typing-area > i {
+.area_escritura > i {
 	font-size: 14px;
 	color: #777;
     padding: 7px;
 
 }
-.typing-box{
+.caja_escritura{
 	border: none;
 	outline: none;
     font-family: Arial, Helvetica, sans-serif;
@@ -185,21 +185,21 @@ hr {
     align-content: center;
 }
 
-.message-box {
+.caja_mensajes {
     margin-top: 5px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     color: rgb(9, 38, 75);
 }
 
-.others-message-box {
+.otros-caja_mensajes {
     padding: 30px;
     margin-top: -18px;
     margin-left: 40px;
     
 }
 
-.my-message-box {
+.mi-caja_mensajes {
     text-align: right;
     background: rgb(255, 255, 255);
     padding-left: 30px;
@@ -207,7 +207,7 @@ hr {
     align-items: center;
 }
 
-.message {
+.mensaje {
     text-align: left;
     width: 100%;
     border-radius: 5%;
@@ -216,13 +216,13 @@ hr {
     color:rgb(128, 112, 112);
 }
 
-.my-message {
+.mi-mensaje {
     float: left;
     background: white;
     margin-left: 40px;
 }
 
-.others-message {
+.otros-mensaje {
     float: left;
     background: white;
 }

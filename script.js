@@ -21,7 +21,7 @@ let mesesDelAño = ["Enero", "Febrero", "Marzo","Abril","Mayo","Junio","Julio","
 
 (function relojPrincipal() {
 
-  var actualizarHora =function(){
+  let actualizarHora =function(){
       fecha = new Date(),
       horas = fecha.getHours(),
       minutos = fecha.getMinutes(),
@@ -45,24 +45,46 @@ let mesesDelAño = ["Enero", "Febrero", "Marzo","Abril","Mayo","Junio","Julio","
   };
 
   actualizarHora();
-  var intervalo = setInterval(actualizarHora,1000);
+  let intervalo = setInterval(actualizarHora,1000);
 
 }())
 
 
-var nombreUsuario = document.getElementById("nom_usuario").innerHTML;
+let divUsuario = document.getElementById("nom_usuario").innerHTML;
+let usuario = document.getElementById("nom_usuario").innerHTML = "Alumno@ BTC" ;
 
 
-function sendMessage() {
+function sendMensaje() {
 
-  var message = document.getElementById("typing-box").value;
-  var reloj = ("<p class='tiempo'>" + phoras + ":" + pminutos + ":" + psegundos + " | " + pdia + " de " + pmes + " del " + pyear + "</p>");
-  var html = nombreUsuario + reloj +
-        '<div class="message-box my-message-box">' +
-        '<div class="message my-message"> ' + message + ' </div>' +
+  let mensaje = document.getElementById("caja_escritura").value;
+  let reloj = ("<p class='tiempo'>" + phoras + ":" + pminutos + ":" + psegundos + " | " + pdia + " de " + pmes + " del " + pyear + "</p>");
+  let tiempo = (phoras + ":" + pminutos + ":" + psegundos + " | " + pdia + " de " + pmes + " del " + pyear);
+
+  let html = divUsuario + reloj +
+        '<div class="caja_mensajes mi-caja_mensajes">' +
+        '<div class="mensaje mi-mensaje"> ' + mensaje + ' </div>' +
         '<div class="separator"></div>';
 
-  document.getElementById("message-area").innerHTML += html;
-  document.getElementById("typing-box").value = "";
-  
+  document.getElementById("area_mensajes").innerHTML += html;
+  document.getElementById("caja_escritura").value = "";
+
+   let arrMensajes = [];
+   arrMensajes.push(mensaje);
+   for (let i =0; i<arrMensajes.length; i++){
+    console.log('arrayMensajes', arrMensajes);
+    nuevoItem = arrMensajes[i];
+   }
+   
+   let InfoCanal = {
+     Canal: arrCanales,
+     Nombre: usuario,
+     Tiempo: tiempo,
+     Mensaje: mensaje
+   }
+
+   console.log(InfoCanal);
 }
+
+
+
+
