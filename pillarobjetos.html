@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="nombre" placeholder="Ingresa tu nombre">
+    <input type="text" id="edad" placeholder="Ingresa tu edad">
+    <button id="boton" type="reset" onclick="capturarcanal();"> Agregar </button>
+    
+    <div class ="container">
+        <table class="table" id="tabla">
+            <thead class ="thead inverse">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                </tr>
+            </thead>
+            
+        </table>
+    </div>
+
+<script>
+
+function capturarcanal (){
+
+    //creando el constructor
+    function Persona(nombre,edad){
+        this.nombre=nombre;
+        this.edad=edad;
+    }
+    //declarando las variables
+    var nombreCapturar =document.getElementById("nombre").value;
+    var edadCaturar =document.getElementById("edad").value;
+
+    //creando nuevos objetos
+    nuevoSujeto = new Persona (nombreCapturar,edadCaturar);
+    console.log(nuevoSujeto);
+    agregar();
+
+}
+
+    //creando el array de nuevos objetos
+    var baseData = [];
+    function agregar (){
+        baseData.push(nuevoSujeto);
+    //llevando el constructor de objetos a una tabla
+        document.getElementById("tabla").innerHTML += '<tbody><td>'+ nuevoSujeto.nombre + '</td><td>' + nuevoSujeto.edad + '</td></tbody>';
+    };
+
+
+</script>
+
+
+</body>
+</html>

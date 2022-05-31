@@ -20,11 +20,11 @@
                 </tr>
                 </table>
             </div>
-            <div class="cont_channels"><h2>Channels<button class="btn_añadir_canales"><i class="fa fa-plus-circle" aria-hidden="true"></i></button></h2>
+            <div class="cont_channels"><h2>Channels<button class="btn_añadir_canales" onclick="capturarcanal();"><i class="fa fa-plus-circle" aria-hidden="true"></i></button></h2>
                 <ul id="listaCanales"></ul>
                 <hr>
             </div>
-            <div class="cont_messages"><h2>Direct messages<button class="btn_añadir_mensajes"><i class="fa fa-plus-circle" aria-hidden="true"></i></button></h2>
+            <div class="cont_mensajes"><h2>Direct mensajes<button class="btn_añadir_mensajes"><i class="fa fa-plus-circle" aria-hidden="true"></i></button></h2>
                 <table class="tabla_usuario">
                     <tr>
                         <td> <div class="circulo_verde"></div> </td>
@@ -55,24 +55,30 @@
             <div class="cont_apps"><h2>Apps<button class="btn_añadir_apps"><i class="fa fa-plus-circle" aria-hidden="true"></i></button></h2></div>
         </div>
         <div id="cont_der">
-            <div class="cont_top">
-                <hr class="linea_gris">
-                <div class="cont_participantes"> <d1>Nombre del canal</d1> 
-                    <div class="barra_busqueda">
-                        <button class="boton_busqueda"><i class="fa fa-search" aria-hidden="true"></i></button>
-                        <input type="text" class="input_busqueda">
-                    </div>
+            <hr class="linea_gris">
+            
+                <div id =toda_cabecera>
+                    <div id= nom_cabecera class="nom_cabecera">Nombre del canal</div>
                     <br><d4>Participantes</d4>
-                <hr class="linea_gris_2">
                 </div>
-                
+                <div id="todo_busqueda">
+                    <div class="barra_busqueda">
+                        <button class="boton_busqueda" onclick="filtrar();"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        <input type="text" id="input_busqueda" class="input_busqueda">
+                    </div>
+                 
             </div>
-            <div class="message-area" id="message-area">
+            <hr class="linea_gris_2">
+            <div class="area_mensajes" id="area_mensajes">
+
+                <ul id="resultado">
+                    
+                </ul>
 
                 <div id="nom_interlocutor"><img src="IMG/iconito_2.png" class="iconito_usuario">
                 <d2>Olivia Montes</d2> <d3>12:15:23</d3><d5>  |  5 de Febrero del 2022</d5></div>
-                <div class="message-box others-message-box">
-                <div class="message others-message"> Hola, ¿qué tal?. Bienvenid@ al canal.</div>
+                <div class="caja_mensajes otros-caja_mensajes">
+                <div class="mensaje otros-mensaje"> Hola, ¿qué tal?. Bienvenid@ al canal.</div>
                 
                     
                 <div id="nom_usuario" hidden><img src="IMG/iconito_1.png" class="iconito_usuario"><d2>Alumno@ BTC</d2></div>
@@ -94,9 +100,9 @@
             </div>
                 
                 <div class="cont_bottom">
-                    <div class="typing-area">
-                        <button class="send-button" onclick="sendMessage()"><i class="fa fa-plus" aria-hidden="true"></i></button>
-                        <textarea class="typing-box" id="typing-box"></textarea>
+                    <div class="area_escritura">
+                        <button class="boton_enviar" onclick="enviarMensaje()"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                        <textarea class="caja_escritura" id="caja_escritura"></textarea>
                     </div>
             </div>
             </div>

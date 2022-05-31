@@ -1,27 +1,31 @@
+function capturarcanal (){
 
+  let inputNuevoCanal = prompt("Nombre Nuevo Canal", "Nuevo Canal");
+  
+  //creando el constructor
+  function Canal(nombre,){
+    this.nombre=nombre; 
+}
+  //declarando las variables
+  let nombreCapturar = inputNuevoCanal;
+  
+  //creando nuevos objetos
+  let nuevoCanal = new Canal (nombreCapturar);
+  console.log(nombreCapturar);
 
-const btnAñadirCanales = document.querySelector(".btn_añadir_canales");
-let arrCanales = [];
+  let lista = document.createElement ("li")
+  nuevoItem = nombreCapturar;
+  lista.innerHTML = nuevoItem;
+  listaCanales.appendChild(lista);
 
-btnAñadirCanales.addEventListener("click", function (evento){
-    arrCanales.push(prompt("Nombre del nuevo canal:"));
-    let lista = document.createElement("li");
-    for (let i =0; i<arrCanales.length; i++){
-        console.log('arrayCanales', arrCanales);
-        nuevoItem = arrCanales[i];
-        lista.innerHTML = nuevoItem;
-        listaCanales.appendChild(lista);
-		
-    }
-});
+  let nomCabecera = document.getElementById ("nom_cabecera").innerHTML = "<class='nom_cabecera'>" + nombreCapturar;
+  
+};
 
 let mesesDelAño = ["Enero", "Febrero", "Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre",];
+(function Contador() {
 
-
-
-(function relojPrincipal() {
-
-  var actualizarHora =function(){
+  let actualizarHora =function(){
       fecha = new Date(),
       horas = fecha.getHours(),
       minutos = fecha.getMinutes(),
@@ -45,24 +49,61 @@ let mesesDelAño = ["Enero", "Febrero", "Marzo","Abril","Mayo","Junio","Julio","
   };
 
   actualizarHora();
-  var intervalo = setInterval(actualizarHora,1000);
+  let intervalo = setInterval(actualizarHora,1000);
 
-}())
+}());
 
+function enviarMensaje(){
 
-var nombreUsuario = document.getElementById("nom_usuario").innerHTML;
+  let mensajeEnviado = document.getElementById("caja_escritura").value;
+  let reloj = ("<p class='tiempo'>" + phoras + ":" + pminutos + ":" + psegundos + " | " + pdia + " de " + pmes + " del " + pyear + "</p>");
+  let divUsuario = document.getElementById("nom_usuario").innerHTML;
 
+  //creando el constructor
+  function Mensaje(usuario,mensaje){
+    this.usuario=usuario;
+    this.mensaje=mensaje;
+}
+  //declarando las variables
 
-function sendMessage() {
+  let usuarioCapturar = document.getElementById("nom_usuario").innerHTML = "Alumno@ BTC"
+  let mensajeCapturar = mensajeEnviado;
 
-  var message = document.getElementById("typing-box").value;
-  var reloj = ("<p class='tiempo'>" + phoras + ":" + pminutos + ":" + psegundos + " | " + pdia + " de " + pmes + " del " + pyear + "</p>");
-  var html = nombreUsuario + reloj +
-        '<div class="message-box my-message-box">' +
-        '<div class="message my-message"> ' + message + ' </div>' +
+  //creando nuevos objetos
+  nuevoMensaje = new Mensaje (usuarioCapturar, mensajeCapturar);
+  agregar();
+
+  //mostrando en pantalla
+  let html = '<div id="nom_usuario"><img src="IMG/iconito_1.png" class="iconito_usuario"><d2>Alumno@ BTC</d2></div>' + reloj +
+        '<div class="caja_mensajes mi-caja_mensajes">' +
+        '<div class="mensaje mi-mensaje"> ' + mensajeCapturar + ' </div>' +
         '<div class="separator"></div>';
 
-  document.getElementById("message-area").innerHTML += html;
-  document.getElementById("typing-box").value = "";
-  
+  document.getElementById("area_mensajes").innerHTML += html;
+  document.getElementById("caja_escritura").value = "";
+
+};
+
+//creando el array de nuevos objetos
+var baseData = [];
+function agregar (){
+    baseData.push(nuevoMensaje); 
+    console.log(nuevoMensaje);
+};
+
+let inputBuscar = document.getElementById("input_busqueda");
+const resultado = document.getElementById ("resultado")
+
+
+let filtrar = ()=> {
+  resultado.innerHTML = '';
+  let texto = inputBuscar.value.toLowerCase();
+  for (let datos of baseData) {
+    let mensajeBuscado = baseData.mensaje.toLowerCase();
+    if (mensajeBuscado.indexOf(texto) !== -1){
+      resultado.innerHTML += `
+      <li>${baseData.mensaje}</li>
+      `
+    }
+  }
 }
