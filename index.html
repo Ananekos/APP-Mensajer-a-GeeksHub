@@ -63,7 +63,7 @@
                 </div>
                 <div id="todo_busqueda">
                     <div class="barra_busqueda">
-                        <button class="boton_busqueda" onclick="filtrar();"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        <button id = "boton_busqueda" class="boton_busqueda"><i class="fa fa-search" aria-hidden="true"></i></button>
                         <input type="text" id="input_busqueda" class="input_busqueda">
                     </div>
                  
@@ -71,14 +71,16 @@
             <hr class="linea_gris_2">
             <div class="area_mensajes" id="area_mensajes">
 
-                <ul id="resultado">
-                    
-                </ul>
+                <div class="resultado_busqueda">
+                    <ul id="resultado" class="resultado_busqueda">
+                        <li class="resultado_busqueda"></li>
+                    </ul>
+                </div>
 
                 <div id="nom_interlocutor"><img src="IMG/iconito_2.png" class="iconito_usuario">
-                <d2>Olivia Montes</d2> <d3>12:15:23</d3><d5>  |  5 de Febrero del 2022</d5></div>
-                <div class="caja_mensajes otros-caja_mensajes">
-                <div class="mensaje otros-mensaje"> Hola, ¿qué tal?. Bienvenid@ al canal.</div>
+                    <d2>Olivia Montes</d2> <d3>12:15:23</d3><d5>  |  5 de Febrero del 2022</d5></div>
+                    <div class="caja_mensajes otros-caja_mensajes">
+                    <div class="mensaje otros-mensaje"> Hola, ¿qué tal?. Bienvenid@ al canal.</div>
                 
                     
                 <div id="nom_usuario" hidden><img src="IMG/iconito_1.png" class="iconito_usuario"><d2>Alumno@ BTC</d2></div>

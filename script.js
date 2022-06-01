@@ -18,10 +18,12 @@ function capturarcanal (){
   lista.innerHTML = nuevoItem;
   listaCanales.appendChild(lista);
 
-  let nomCabecera = document.getElementById ("nom_cabecera").innerHTML = "<class='nom_cabecera'>" + nombreCapturar;
+  document.getElementById ("nom_cabecera").innerHTML = "<class='nom_cabecera'>" + nombreCapturar;
+  //document.getElementById("area_mensajes").innerHTML = "";
   
 };
 
+//Contador de tiempo
 let mesesDelAño = ["Enero", "Febrero", "Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre",];
 (function Contador() {
 
@@ -57,12 +59,14 @@ function enviarMensaje(){
 
   let mensajeEnviado = document.getElementById("caja_escritura").value;
   let reloj = ("<p class='tiempo'>" + phoras + ":" + pminutos + ":" + psegundos + " | " + pdia + " de " + pmes + " del " + pyear + "</p>");
+  let relojDos = (+ phoras + ":" + pminutos + ":" + psegundos + " | " + pdia + " de " + pmes + " del " + pyear);
   let divUsuario = document.getElementById("nom_usuario").innerHTML;
 
   //creando el constructor
-  function Mensaje(usuario,mensaje){
+  function Mensaje(usuario,mensaje,fecha){
     this.usuario=usuario;
     this.mensaje=mensaje;
+    this.fecha=fecha;
 }
   //declarando las variables
 
@@ -70,7 +74,7 @@ function enviarMensaje(){
   let mensajeCapturar = mensajeEnviado;
 
   //creando nuevos objetos
-  nuevoMensaje = new Mensaje (usuarioCapturar, mensajeCapturar);
+  nuevoMensaje = new Mensaje (usuarioCapturar, mensajeCapturar,relojDos);
   agregar();
 
   //mostrando en pantalla
@@ -91,19 +95,30 @@ function agregar (){
     console.log(nuevoMensaje);
 };
 
-let inputBuscar = document.getElementById("input_busqueda");
-const resultado = document.getElementById ("resultado")
+//barra de busqueda
+const formulario = document.getElementById('input_busqueda');
+const boton = document.getElementById('boton_busqueda');
+const resultado = document.getElementById('area_mensajes');
 
+const filtrar = ()=>{
+    //console.log(formulario.value);
+    //resultado.innerHTML = '';
+    const texto = formulario.value.toLowerCase();
+    for(let datos of baseData){
+        let mensaje = datos.mensaje;
+        if(mensaje.indexOf(texto) !== -1){
+          resultado.innerHTML = document.getElementById("caja_escritura").value = ( `<p class='mensaje_encontrado'>
+          Usuario: ${datos.usuario} - Mensaje: "${datos.mensaje}" - Fecha y hora: ${datos.fecha}
+          `);
+        }else{resultado.innerHTML = ( `<p class='mensaje_no_encontrado'> Lo siento, mensaje no encontrado.
+        `);
 
-let filtrar = ()=> {
-  resultado.innerHTML = '';
-  let texto = inputBuscar.value.toLowerCase();
-  for (let datos of baseData) {
-    let mensajeBuscado = baseData.mensaje.toLowerCase();
-    if (mensajeBuscado.indexOf(texto) !== -1){
-      resultado.innerHTML += `
-      <li>${baseData.mensaje}</li>
-      `
+        }
+
     }
-  }
+    
 }
+
+boton.addEventListener('click', filtrar);
+//formulario.addEventListener('keyup',filtrar);
+//filtrar();
