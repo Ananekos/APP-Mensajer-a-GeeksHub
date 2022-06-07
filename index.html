@@ -20,8 +20,9 @@
                 </tr>
                 </table>
             </div>
-            <div class="cont_channels"><h2>Channels<button class="btn_añadir_canales" onclick="capturarcanal();"><i class="fa fa-plus-circle" aria-hidden="true"></i></button></h2>
-                <ul id="listaCanales"></ul>
+            <div class="cont_channels"><h2>Channels<button class="btn_añadir_canales" id="btn_añadir_canales"onclick="capturarcanal()"><i class="fa fa-plus-circle" aria-hidden="true"></i></button></h2>
+                <ul id="listaCanales">
+                </ul>
                 <hr>
             </div>
             <div class="cont_mensajes"><h2>Direct mensajes<button class="btn_añadir_mensajes"><i class="fa fa-plus-circle" aria-hidden="true"></i></button></h2>
@@ -103,7 +104,7 @@
                 
                 <div class="cont_bottom">
                     <div class="area_escritura">
-                        <button class="boton_enviar" onclick="enviarMensaje()"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                        <button class="boton_enviar" id="boton_enviar" onclick="enviarMensaje()"><i class="fa fa-plus" aria-hidden="true"></i></button>
                         <textarea class="caja_escritura" id="caja_escritura"></textarea>
                     </div>
             </div>

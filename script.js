@@ -1,29 +1,34 @@
+const channels = [];
+
+console.log(channels);
+
+//01. CREACIÓN NUEVOS CANALES
+
 function capturarcanal (){
 
   let inputNuevoCanal = prompt("Nombre Nuevo Canal", "Nuevo Canal");
+  let reloj = (phoras + ":" + pminutos + ":" + psegundos + " | " + pdia + " de " + pmes + " del " + pyear);
   
-  //creando el constructor
-  function Canal(nombre,){
-    this.nombre=nombre; 
-}
-  //declarando las variables
-  let nombreCapturar = inputNuevoCanal;
-  
-  //creando nuevos objetos
-  let nuevoCanal = new Canal (nombreCapturar);
-  console.log(nombreCapturar);
+  const newChannel = {
+    name: inputNuevoCanal,
+    messages: [],
+  }
+  channels.push(newChannel);
+  console.log(channels);
 
-  let lista = document.createElement ("li")
-  nuevoItem = nombreCapturar;
-  lista.innerHTML = nuevoItem;
+  let lista = document.createElement ("button");
+  lista.innerHTML = inputNuevoCanal;
+  lista.className = 'btnNomCanal';
+  lista.id = 'btnNomCanal';
   listaCanales.appendChild(lista);
 
-  document.getElementById ("nom_cabecera").innerHTML = "<class='nom_cabecera'>" + nombreCapturar;
-  //document.getElementById("area_mensajes").innerHTML = "";
-  
+  document.getElementById ("nom_cabecera").innerHTML = "<class='nom_cabecera'>" + inputNuevoCanal;
+
 };
 
-//Contador de tiempo
+
+//02. CONTADOR DE TIEMPO
+
 let mesesDelAño = ["Enero", "Febrero", "Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre",];
 (function Contador() {
 
@@ -55,70 +60,47 @@ let mesesDelAño = ["Enero", "Febrero", "Marzo","Abril","Mayo","Junio","Julio","
 
 }());
 
+//03. ENVIANDO LOS MENSAJES
+
 function enviarMensaje(){
+  
 
   let mensajeEnviado = document.getElementById("caja_escritura").value;
-  let reloj = ("<p class='tiempo'>" + phoras + ":" + pminutos + ":" + psegundos + " | " + pdia + " de " + pmes + " del " + pyear + "</p>");
-  let relojDos = (+ phoras + ":" + pminutos + ":" + psegundos + " | " + pdia + " de " + pmes + " del " + pyear);
-  let divUsuario = document.getElementById("nom_usuario").innerHTML;
+  let reloj = (phoras + ":" + pminutos + ":" + psegundos + " | " + pdia + " de " + pmes + " del " + pyear);
+  let usuarioCapturar = document.getElementById("nom_usuario").innerHTML = "Alumno@ BTC";
 
-  //creando el constructor
-  function Mensaje(usuario,mensaje,fecha){
-    this.usuario=usuario;
-    this.mensaje=mensaje;
-    this.fecha=fecha;
-}
-  //declarando las variables
+  const newMessage = {
+    usuario: usuarioCapturar,
+    mensaje: mensajeEnviado,
+    fecha: reloj,
+  }
 
-  let usuarioCapturar = document.getElementById("nom_usuario").innerHTML = "Alumno@ BTC"
-  let mensajeCapturar = mensajeEnviado;
+  channels.push({messages:[newMessage], date: reloj });
 
-  //creando nuevos objetos
-  nuevoMensaje = new Mensaje (usuarioCapturar, mensajeCapturar,relojDos);
-  agregar();
+  /*let btnCanal = document.getElementById("btnNomCanal").textContent;
 
-  //mostrando en pantalla
-  let html = '<div id="nom_usuario"><img src="IMG/iconito_1.png" class="iconito_usuario"><d2>Alumno@ BTC</d2></div>' + reloj +
-        '<div class="caja_mensajes mi-caja_mensajes">' +
-        '<div class="mensaje mi-mensaje"> ' + mensajeCapturar + ' </div>' +
-        '<div class="separator"></div>';
+  channels.forEach(object =>{
+    if(object.name === btnCanal){
+    } channels.push({messages:[newMessage], date: reloj });
 
-  document.getElementById("area_mensajes").innerHTML += html;
-  document.getElementById("caja_escritura").value = "";
+});*/
+
+ //03.1 Impriendo en pantalla
+  
+ let html = '<div id="nom_usuario"><img src="IMG/iconito_1.png" class="iconito_usuario"></div>' + 
+ '<div class="usario_style">'+ usuarioCapturar + "<p class='tiempo'>" + "<p class='tiempo'>" + reloj +
+ '<div class="mensaje"> ' + mensajeEnviado + ' </div>';
+
+ document.getElementById("area_mensajes").innerHTML += html;
+ document.getElementById("caja_escritura").value = "";
 
 };
 
-//creando el array de nuevos objetos
-var baseData = [];
-function agregar (){
-    baseData.push(nuevoMensaje); 
-    console.log(nuevoMensaje);
-};
+//04. RELACIONANDO CANAL CON SUS MENSAJES
 
-//barra de busqueda
-const formulario = document.getElementById('input_busqueda');
-const boton = document.getElementById('boton_busqueda');
-const resultado = document.getElementById('area_mensajes');
 
-const filtrar = ()=>{
-    //console.log(formulario.value);
-    //resultado.innerHTML = '';
-    const texto = formulario.value.toLowerCase();
-    for(let datos of baseData){
-        let mensaje = datos.mensaje;
-        if(mensaje.indexOf(texto) !== -1){
-          resultado.innerHTML = document.getElementById("caja_escritura").value = ( `<p class='mensaje_encontrado'>
-          Usuario: ${datos.usuario} - Mensaje: "${datos.mensaje}" - Fecha y hora: ${datos.fecha}
-          `);
-        }else{resultado.innerHTML = ( `<p class='mensaje_no_encontrado'> Lo siento, mensaje no encontrado.
-        `);
 
-        }
+  //function agregar (newMessage,channelActive){
+    //console.log(channels);
+//};
 
-    }
-    
-}
-
-boton.addEventListener('click', filtrar);
-//formulario.addEventListener('keyup',filtrar);
-//filtrar();
