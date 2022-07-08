@@ -1,75 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>App GeeksHubs</title>
 </head>
 <body>
 
     <div id="cont_general">
         <div id="cont_izq">
-            <div class="cont_reto"> <h1>Reto GeeksHubs</h1>
+            <div class="cont_reto">
+                <h1>Reto GeeksHubs</h1>
                 <table class="tabla_usuario">
-                <tr>
-                    <td> <div class="circulo_verde"></div> </td>
-                    <td> <div> <h4>Alumno@ BTC</h4></div></td>
-                </tr>
+                    <tr>
+                        <td>
+                            <div class="circulo_verde"></div>
+                        </td>
+                        <td>
+                            <div>
+                                <h4>Alumno@ BTC</h4>
+                            </div>
+                        </td>
+                    </tr>
                 </table>
             </div>
-            <div class="cont_channels"><h2>Channels<button class="btn_añadir_canales" id="btn_añadir_canales"onclick="capturarcanal()"><i class="fa fa-plus-circle" aria-hidden="true"></i></button></h2>
+            <div class="cont_channels">
+                <div class="cont_channels_titulo">
+                    <h2>Channels</h2>
+                    <button class="btn_añadir_canales" id="btn_añadir_canales" onclick="capturarcanal()">
+                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                    </button>
+                </div>
+                
                 <ul id="listaCanales">
                 </ul>
                 <hr>
             </div>
-            <div class="cont_mensajes"><h2>Direct mensajes<button class="btn_añadir_mensajes"><i class="fa fa-plus-circle" aria-hidden="true"></i></button></h2>
+            <div class="cont_mensajes">
+                <div class="cont_mensajes_titulo">
+                    <h2>Direct mensajes</h2>
+                    <button class="btn_añadir_mensajes">
+                        <i class="fa fa-plus-circle"aria-hidden="true"></i>
+                    </button>
+                </div>
+               
                 <table class="tabla_usuario">
                     <tr>
-                        <td> <div class="circulo_verde"></div> </td>
-                        <td> <div> <h3>Olivia Montes</h3></div></td>
+                        <td>
+                            <div class="circulo_verde"></div>
+                        </td>
+                        <td>
+                            <div>
+                                <h3>Olivia Montes</h3>
+                            </div>
+                        </td>
                     </tr>
-                    </table>
-                    <table class="tabla_usuario">
-                        <tr>
-                            <td> <div class="circulo_verde"></div> </td>
-                            <td> <div> <h3>Isabel Carballo</h3></div></td>
-                        </tr>
-                        </table>
-                        <table class="tabla_usuario">
-                            <tr>
-                                <td> <div class="circulo_ausente"></div> </td>
-                                <td> <div> <h3>Javier Cuenca</h3></div></td>
-                            </tr>
-                            </table>
-                            <table class="tabla_usuario">
-                                <tr>
-                                    <td> <div class="circulo_verde"></div> </td>
-                                    <td> <div> <h3>Peter Griffin</h3></div></td>
-                                </tr>
-                                </table>
-                                <hr>
+                </table>
+                <table class="tabla_usuario">
+                    <tr>
+                        <td>
+                            <div class="circulo_verde"></div>
+                        </td>
+                        <td>
+                            <div>
+                                <h3>Isabel Carballo</h3>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <table class="tabla_usuario">
+                    <tr>
+                        <td>
+                            <div class="circulo_ausente"></div>
+                        </td>
+                        <td>
+                            <div>
+                                <h3>Javier Cuenca</h3>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <table class="tabla_usuario">
+                    <tr>
+                        <td>
+                            <div class="circulo_verde"></div>
+                        </td>
+                        <td>
+                            <div>
+                                <h3>Peter Griffin</h3>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <hr>
             </div>
-            
-            <div class="cont_apps"><h2>Apps<button class="btn_añadir_apps"><i class="fa fa-plus-circle" aria-hidden="true"></i></button></h2></div>
+            <div class="cont_apps">
+                <div class="cont_apps_titulo"><h2>Apps</h2>
+                <button class="btn_añadir_apps">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                </button></div>
+                
+            </div>
         </div>
         <div id="cont_der">
-            <hr class="linea_gris">
-            
-                <div id =toda_cabecera>
-                    <div id= nom_cabecera class="nom_cabecera">Nombre del canal</div>
-                    <br><d4>Participantes</d4>
-                </div>
-                <div id="todo_busqueda">
-                    <div class="barra_busqueda">
-                        <button id = "boton_busqueda" class="boton_busqueda"><i class="fa fa-search" aria-hidden="true"></i></button>
-                        <input type="text" id="input_busqueda" class="input_busqueda">
-                    </div>
-                 
+            <div id="area_cabecera">
             </div>
-            <hr class="linea_gris_2">
             <div class="area_mensajes" id="area_mensajes">
 
                 <div class="resultado_busqueda">
@@ -77,43 +117,31 @@
                         <li class="resultado_busqueda"></li>
                     </ul>
                 </div>
-
-                <div id="nom_interlocutor"><img src="IMG/iconito_2.png" class="iconito_usuario">
-                    <d2>Olivia Montes</d2> <d3>12:15:23</d3><d5>  |  5 de Febrero del 2022</d5></div>
-                    <div class="caja_mensajes otros-caja_mensajes">
-                    <div class="mensaje otros-mensaje"> Hola, ¿qué tal?. Bienvenid@ al canal.</div>
-                
-                    
-                <div id="nom_usuario" hidden><img src="IMG/iconito_1.png" class="iconito_usuario"><d2>Alumno@ BTC</d2></div>
-                
-                <div hidden>
-                    <div id = "horas" class ="tiempo"></div>
-                    <div class ="tiempo">:</div>
-                    <div id = "minutos" class ="tiempo"></div>
-                    <div class ="tiempo">:</div>
-                    <div id = "segundos" class ="tiempo"></div>
-                    <div class ="tiempo"> | </div>
-                    <div id = "dia" class ="tiempo"></div>
-                    <div class ="tiempo"> de </div>
-                    <div id = "mes" class ="tiempo"></div>
-                    <div class ="tiempo"> del </div>
-                    <div id = "year" class ="tiempo"></div>
+                <div id="area_mensajes_nuevos">
                 </div>
-                
+                <div id="nom_usuario" hidden><img src="IMG/iconito_1.png" class="iconito_usuario">
+                    <d2>Alumno@ BTC</d2>
+                </div>
+                <div hidden>
+                    <div id="horas" class="tiempo"></div>
+                    <div class="tiempo">:</div>
+                    <div id="minutos" class="tiempo"></div>
+                    <div class="tiempo">:</div>
+                    <div id="segundos" class="tiempo"></div>
+                    <div class="tiempo"> | </div>
+                    <div id="dia" class="tiempo"></div>
+                    <div class="tiempo"> de </div>
+                    <div id="mes" class="tiempo"></div>
+                    <div class="tiempo"> del </div>
+                    <div id="year" class="tiempo"></div>
+                </div>
             </div>
-                
-                <div class="cont_bottom">
-                    <div class="area_escritura">
-                        <button class="boton_enviar" id="boton_enviar" onclick="enviarMensaje()"><i class="fa fa-plus" aria-hidden="true"></i></button>
-                        <textarea class="caja_escritura" id="caja_escritura"></textarea>
-                    </div>
+            <div class="cont_bottom" id="area_escritura">
             </div>
-            </div>
-                
-            
-            </div>     
         </div>
     </div>
-<script src="./script.js"></script>
+    </div>
+    </div>
+    <script src="./script.js"></script>
 </body>
 </html>
