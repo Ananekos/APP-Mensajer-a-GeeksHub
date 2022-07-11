@@ -17,7 +17,7 @@
     "left_container right_container" ;
 }
 
-  #left_container {
+#left_container {
     background-color: rgb(9, 38, 75);
     height: 100vh;
     grid-column-start: left_container;
@@ -88,6 +88,24 @@
     font-size: 20px;
     color:white; 
     margin-bottom: 10px;
+}
+
+.btn_add_start {
+    cursor:pointer;
+    border:none;
+    font-size: 20px;
+    background-color: white;
+}
+
+.btn_add_start i {
+    font-size: 20px;
+    color:rgb(35, 154, 223); 
+    margin-left: 10px;
+}
+
+.start_sentence{
+    display: flex;
+    align-items: center;
 }
 
 .table_user{
@@ -257,6 +275,14 @@
     overflow-y: scroll; 
 }
 
+.animation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 85%;
+}
+
 /* Estilos Tipografías */
 
 h1 {
@@ -321,4 +347,32 @@ ul {
 
 hr{
     border: solid 1px rgb(21, 66, 124);
+}
+
+iframe{
+    border:none;
+}
+
+/* Break points */
+
+@media (max-width: 769px) {
+    #main_container{
+        grid-template-columns: 35% 65%;
+    }
+}
+
+@media (max-width: 576px) {
+    #main_container{
+        margin:auto;
+        height: 90%;
+        display: grid;
+        justify-self: center;
+        max-width: 1400px;
+        grid-template-areas:
+        "right_container right_container"
+        "left_container left_container" ;
+    }
+    #left_container {
+        height: auto;
+    }
 }

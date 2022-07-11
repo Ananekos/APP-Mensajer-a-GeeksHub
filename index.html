@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css"
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <title>App GeeksHubs</title>
 </head>
 <body>
@@ -111,6 +112,17 @@
             <div id="head_container">
             </div>
             <div class="messages_area" id="messages_area">
+                <div class="animation" id="animation">
+                    <div class="start-text"><iframe src="https://embed.lottiefiles.com/animation/106068"></iframe>
+                        <div class="start_sentence">
+                            <p>Para comenzar, agrega un nuevo canal</p>
+                            <button class="btn_add_start" id="btn_add_channels" onclick="creatingChannels()">
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
 
                 <div class="search_result">
                     <ul id="result" class="search_result">

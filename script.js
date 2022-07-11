@@ -4,6 +4,7 @@ let currentChannel = null;
 
 console.log(channels);
 
+
 //01. CREACIÓN CANALES
 
 function creatingChannels() {
@@ -24,12 +25,15 @@ function creatingChannels() {
   channelsList.innerHTML += btnNewChannel;
   currentChannel = newChannel.pos;
 
+
   //02. MOSTRANDO LA INTERFAZ COMPLETA AL CREAR NUEVO CANAL
 
   if (channels.length == 1) {
+
+    document.getElementById('animation').style.display = 'none';
     document.getElementById("writing_area").innerHTML =
       '<div class="writing_area" >' +
-      '<button class="btn_send" id="btn_send" onclick="enviarMensaje()"><i class="fa fa-plus"aria-hidden="true"></i></button>' +
+      '<button class="btn_send" id="btn_send" onclick="sendingMessages()"><i class="fa fa-plus"aria-hidden="true"></i></button>' +
       '<textarea class="input_box" id="input_box"></textarea>' +
       '</div>';
     document.getElementById("head_container").innerHTML =
@@ -68,7 +72,7 @@ function openChannel(ChannelPos) {
 
   if (channels[ChannelPos].messages.length > 0) {
     for (let message of channels[ChannelPos].messages) {
-      pintarMensaje(message);
+      paintingMessages(message);
     }
   }
 }
@@ -94,10 +98,10 @@ function search() {
 
 //05. CONTADOR DE TIEMPO
 
-let mesesDelAño = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre",];
-(function Contador() {
+let allMonths = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre",];
+(function timer() {
 
-  let actualizarHora = function () {
+  let updateHour = function () {
     fecha = new Date(),
       hours = fecha.getHours(),
       minutes = fecha.getMinutes(),
@@ -111,7 +115,7 @@ let mesesDelAño = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Juli
       pminutes = document.getElementById("minutes").innerHTML = minutes,
       pseconds = document.getElementById("seconds").innerHTML = seconds,
       pday = document.getElementById("day").innerHTML = day,
-      pmonth = document.getElementById("month").innerHTML = mesesDelAño[month],
+      pmonth = document.getElementById("month").innerHTML = allMonths[month],
       pyear = document.getElementById("year").innerHTML = year;
 
     if (phours < 10) { phours = "0" + phours };
@@ -120,33 +124,33 @@ let mesesDelAño = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Juli
 
   };
 
-  actualizarHora();
-  let intervalo = setInterval(actualizarHora, 1000);
+  updateHour();
+  let intervalo = setInterval(updateHour, 1000);
 
 }());
 
 //06. ENVIANDO LOS MENSAJES
 
-function enviarMensaje() {
-  console.log('enviarMensaje', channels[currentChannel]);
-  let mensajeEnviado = document.getElementById("input_box").value;
-  if (mensajeEnviado != '') {
-    let reloj = (phours + ":" + pminutes + ":" + pseconds + " | " + pday + " de " + pmonth + " del " + pyear);
-    let usuarioCapturar = document.getElementById("user_name").innerHTML = "Alumno@ BTC";
+function sendingMessages() {
+  console.log('sendingMessages', channels[currentChannel]);
+  let sentMessage = document.getElementById("input_box").value;
+  if (sentMessage != '') {
+    let clock = (phours + ":" + pminutes + ":" + pseconds + " | " + pday + " de " + pmonth + " del " + pyear);
+    let userName = document.getElementById("user_name").innerHTML = "Alumno@ BTC";
 
     const newMessage = {
-      usuario: usuarioCapturar,
-      mensaje: mensajeEnviado,
-      fecha: reloj,
+      usuario: userName,
+      mensaje: sentMessage,
+      fecha: clock,
     }
 
     channels[currentChannel].messages.push(newMessage);
-    pintarMensaje(newMessage);
+    paintingMessages(newMessage);
     console.log('mensaje', newMessage);
   }
 };
 
-function pintarMensaje(newMessage) {
+function paintingMessages(newMessage) {
   let html =
   '<div id="nom_interlocutor"><img src="IMG/iconito_1.png" class="user_icon">' +
   '<d2>' + newMessage.usuario + '</d2>' +
