@@ -6,7 +6,7 @@
     font-family: Arial, Helvetica, sans-serif;
   }
 
-  #cont_general{
+  #main_container{
     margin:auto;
     height: 90%;
 	display: grid;
@@ -14,32 +14,18 @@
 	grid-template-columns: 25% 75%;
     max-width: 1400px;
 	grid-template-areas: 
-    "cont_izq cont_der" ;
-  }
+    "left_container right_container" ;
+}
 
-  #cont_izq {
+  #left_container {
     background-color: rgb(9, 38, 75);
     height: 100vh;
-    grid-column-start: cont_izq;
-	grid-column-end: cont_izq;
+    grid-column-start: left_container;
+	grid-column-end: left_container;
     padding: 30px;
 }
 
-#cont_der {
-    display: grid;
-	grid-template-rows: 80px auto 30px ;
-    height: 100vh;
-    min-width: 500px;
-    grid-column-start: cont_der;
-	grid-column-end: cont_der;
-    padding: 30px;
-    grid-template-areas: 
-    "toda_cabecera"
-    "area_mensajes"
-    "area_busqueda" ;
-}
-
-.cont_reto{
+.app_name{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -47,32 +33,37 @@
     margin-bottom: 50px;
 }
 
-.cont_channels_titulo{
+#right_container {
+    display: grid;
+	grid-template-rows: 80px auto 30px ;
+    height: 100vh;
+    min-width: 500px;
+    grid-column-start: right_container;
+	grid-column-end: right_container;
+    padding: 30px;
+    grid-template-areas: 
+    "all_header"
+    "messages_area"
+    "area_busqueda" ;
+}
+
+.cont_channels_tittle{
     display:flex;
     justify-content: space-between;
 }
 
-.btn_añadir_canales {
-    cursor:pointer;
-    border:none;
-    background-color:rgb(9, 38, 75);
-    font-size: 20px;
-    color:white;  
-    margin-bottom: 10px;
-}
-
-#listaCanales{
+#channelsList{
     margin-bottom: 20px;
 }
 
-.cont_mensajes_titulo{
+.cont_messages_tittle{
     display:flex;
     justify-content: space-between;
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
-.btnNomCanal{
+.btn_channel_name{
     color:white;
     font-size: 15px;
     background-color:rgb(9, 38, 75);
@@ -85,13 +76,12 @@
     margin-left: 10px;
 }
 
-.btnNomCanal:hover {
+.btn_channel_name:hover {
   background-color: rgb(18, 64, 124);
   border-color: transparent;
 }
 
-
-.btn_añadir_mensajes {
+.btn_add {
     cursor:pointer;
     border:none;
     background-color:rgb(9, 38, 75);
@@ -100,26 +90,17 @@
     margin-bottom: 10px;
 }
 
-.tabla_usuario{
+.table_user{
     margin-bottom: 20px;
 }
 
-.cont_apps_titulo{
+.apps_container_tittle{
     display:flex;
     justify-content: space-between;
     margin-top: 20px;
 }
 
-.btn_añadir_apps {
-    cursor:pointer;
-    border:none;
-    background-color:rgb(9, 38, 75);
-    font-size: 20px;
-    color:white;  
-    margin-bottom: 10px;
-}
-
-.circulo_verde {
+.conected_dot {
     width: 12px;
     height: 12px;
     margin-right: 15px;
@@ -127,7 +108,7 @@
     background-color: rgb(21, 175, 21);
 }
 
-.circulo_ausente {
+.disconected_dot {
     width: 10px;
     height: 10px;
     margin-right: 15px;
@@ -136,53 +117,32 @@
     border: 1px solid rgb(255, 255, 255);
 }
 
-.linea_gris {
-    border: none; 
-    height: 1px; 
-    background:rgb(189, 189, 189);
-  }
-
-.linea_gris_2 {
-    border: none; 
-    height: 1px; 
-    background:rgb(189, 189, 189);
-    margin-top: 62px;
-    margin-bottom: 30px;
-  }
-
-  .nom_cabecera {
+.channel_name_head {
     margin-top: 8px;
     color:black;
     font-size: 20px;
     font-weight: bolder;
-    
 }
 
-#area_cabecera {
+#head_container {
     display: flex; 
-    
     justify-content: space-between;
-    border-top: solid 1px grey;
-    border-bottom: solid 1px grey;
+    border-top: solid 1px rgb(199, 199, 199);
+    border-bottom: solid 1px  rgb(199, 199, 199)
 }
 
-.toda_cabecera{
+.all_header{
   display: flex;
   align-content: center;
 }
 
-#todo_busqueda{
+#all_search{
     margin-top: 20px;
     display: flex;
     align-content: center;
 }
 
-.nom_usuario{
-    float: left;   
-}
-
-
-.barra_busqueda{
+.search_bar{
     display: flex;
     align-items: center;
     border: 1px solid #bebebe;
@@ -193,7 +153,7 @@
     float:right;
 }
 
-.boton_busqueda {
+.search_button {
 	background-color: #ffffff;
     align-items: center;
     width: 30px;
@@ -202,12 +162,12 @@
     cursor:pointer;
 }
 
-.boton_busqueda > i {
+.search_button > i {
 	font-size: 20px;
 	color: #777;
 }
 
-.input_busqueda {
+.input_search {
 	flex: 1;
 	height: 30px;
     width: 150px;
@@ -217,15 +177,15 @@
 	padding-left: 10px;
 }
 
-#area_mensajes_nuevos{
+#new_messages_area{
     margin-top: 30px;
 }
 
-.iconito_usuario {
+.user_icon {
     width: 30px;
 }
 
-.tiempo {
+.time {
     display:inline-block;
     color:rgb(85, 85, 85);
     font-family: Arial, Helvetica, sans-serif;
@@ -234,15 +194,9 @@
     margin-left:10px;
 }
 
-.otros-mensaje {
+.other_user_message {
     font-size: 14px;
     margin-top: 10px;
-    margin-bottom: 30px;
-}
-
-.usario_style{
-    font-size: 14px;
-    font-weight: bolder;
     margin-bottom: 30px;
 }
 
@@ -251,7 +205,7 @@
 	grid-column-end: area_busqueda;
 }
 
-.boton_enviar {
+.btn_send {
 	background-color: #ffffff;
     width: 30px;
     height: 30px;
@@ -259,30 +213,27 @@
     cursor:pointer;
 }
 
-.boton_enviar > i {
+.btn_send > i {
 	font-size: 20px;
 	color: rgb(139, 139, 139);
 }
 
-
-.area_escritura {
+.writing_area {
     display: flex;
     align-items: center;
     border: 1px solid #bebebe;
     border-radius: 15px;
     height: 40px;
 	padding: 7px;
-    
-
-
 }
-.area_escritura > i {
+
+.writing_area > i {
 	font-size: 14px;
 	color: #777;
     padding: 7px;
-
 }
-.caja_escritura{
+
+.input_box{
 	border: none;
 	outline: none;
 	font-size: 16px;
@@ -292,26 +243,19 @@
     align-content: center;
 }
 
-.caja_mensajes {
+.mesages_box {
     margin-top: 5px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     color: rgb(9, 38, 75);
 }
 
-.area_mensajes{
+.messages_area{
     width: 100%;
     height: 85%;
     overflow-x: hidden;
     overflow-y: scroll; 
 }
-
-
-
-
-
-
-
 
 /* Estilos Tipografías */
 
@@ -319,67 +263,62 @@ h1 {
     color:white;
     font-size:20px;
     margin-bottom: 10px;
-  }
-  
+}
+
   h2 {
       color:white;
       font-size: 17px;
-  }
-  
+}
+
   h3 {
       color:white;
       font-size: 15px;
       font-weight: lighter;
       width: 200px;
-  }
-  
+}
+
   h4 {
       color:rgb(207, 207, 207);
       font-size: 12px;
       font-weight: lighter;
       width: 300px;
-  }
+}
+
   d1 {
       font-size: 20px;
       font-weight: bolder;
-    }
-    
+}
+
   d2 {
       font-size: 14px;
       font-weight: bolder;
-    }
-  
+}
+
   d3 {
-      font-size: 12px;
-      
-    }
-  
+      font-size: 12px;  
+}
+
   d4 {
       color:rgb(85, 85, 85);
       font-size: 12px;
       font-weight:lighter;  
-  }
-  
+}
+
   d5 {
       color:rgb(138, 138, 138);
-      font-size: 12px;
-      
-    }
-  
-  /*.tabla_usuario{
-      padding-left: 30px;
-  }*/
-  
-  li {
+      font-size: 12px;  
+}
+
+li {
       color:white;
       font-size: 15px;
       font-weight: lighter;
-  }
-  
-  ul {
-      list-style: none;
-  }
+}
 
-  hr{
+ul {
+      list-style: none;
+}
+
+hr{
     border: solid 1px rgb(21, 66, 124);
-  }
+}

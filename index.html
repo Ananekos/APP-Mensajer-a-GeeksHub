@@ -12,14 +12,14 @@
 </head>
 <body>
 
-    <div id="cont_general">
-        <div id="cont_izq">
-            <div class="cont_reto">
+    <div id="main_container">
+        <div id="left_container">
+            <div class="app_name">
                 <h1>Reto GeeksHubs</h1>
-                <table class="tabla_usuario">
+                <table class="table_user">
                     <tr>
                         <td>
-                            <div class="circulo_verde"></div>
+                            <div class="conected_dot"></div>
                         </td>
                         <td>
                             <div>
@@ -30,29 +30,29 @@
                 </table>
             </div>
             <div class="cont_channels">
-                <div class="cont_channels_titulo">
+                <div class="cont_channels_tittle">
                     <h2>Channels</h2>
-                    <button class="btn_añadir_canales" id="btn_añadir_canales" onclick="capturarcanal()">
+                    <button class="btn_add" id="btn_add_channels" onclick="creatingChannels()">
                         <i class="fa fa-plus-circle" aria-hidden="true"></i>
                     </button>
                 </div>
                 
-                <ul id="listaCanales">
+                <ul id="channelsList">
                 </ul>
                 <hr>
             </div>
-            <div class="cont_mensajes">
-                <div class="cont_mensajes_titulo">
+            <div class="_cont_messages">
+                <div class="cont_messages_tittle">
                     <h2>Direct mensajes</h2>
-                    <button class="btn_añadir_mensajes">
+                    <button class="btn_add">
                         <i class="fa fa-plus-circle"aria-hidden="true"></i>
                     </button>
                 </div>
                
-                <table class="tabla_usuario">
+                <table class="table_user">
                     <tr>
                         <td>
-                            <div class="circulo_verde"></div>
+                            <div class="conected_dot"></div>
                         </td>
                         <td>
                             <div>
@@ -61,10 +61,10 @@
                         </td>
                     </tr>
                 </table>
-                <table class="tabla_usuario">
+                <table class="table_user">
                     <tr>
                         <td>
-                            <div class="circulo_verde"></div>
+                            <div class="conected_dot"></div>
                         </td>
                         <td>
                             <div>
@@ -73,10 +73,10 @@
                         </td>
                     </tr>
                 </table>
-                <table class="tabla_usuario">
+                <table class="table_user">
                     <tr>
                         <td>
-                            <div class="circulo_ausente"></div>
+                            <div class="disconected_dot"></div>
                         </td>
                         <td>
                             <div>
@@ -85,10 +85,10 @@
                         </td>
                     </tr>
                 </table>
-                <table class="tabla_usuario">
+                <table class="table_user">
                     <tr>
                         <td>
-                            <div class="circulo_verde"></div>
+                            <div class="conected_dot"></div>
                         </td>
                         <td>
                             <div>
@@ -99,44 +99,44 @@
                 </table>
                 <hr>
             </div>
-            <div class="cont_apps">
-                <div class="cont_apps_titulo"><h2>Apps</h2>
-                <button class="btn_añadir_apps">
+            <div class="apps_container">
+                <div class="apps_container_tittle"><h2>Apps</h2>
+                <button class="btn_add">
                     <i class="fa fa-plus-circle" aria-hidden="true"></i>
                 </button></div>
                 
             </div>
         </div>
-        <div id="cont_der">
-            <div id="area_cabecera">
+        <div id="right_container">
+            <div id="head_container">
             </div>
-            <div class="area_mensajes" id="area_mensajes">
+            <div class="messages_area" id="messages_area">
 
-                <div class="resultado_busqueda">
-                    <ul id="resultado" class="resultado_busqueda">
-                        <li class="resultado_busqueda"></li>
+                <div class="search_result">
+                    <ul id="result" class="search_result">
+                        <li class="search_result"></li>
                     </ul>
                 </div>
-                <div id="area_mensajes_nuevos">
+                <div id="new_messages_area">
                 </div>
-                <div id="nom_usuario" hidden><img src="IMG/iconito_1.png" class="iconito_usuario">
+                <div id="user_name" hidden><img src="IMG/iconito_1.png" class="user_icon">
                     <d2>Alumno@ BTC</d2>
                 </div>
                 <div hidden>
-                    <div id="horas" class="tiempo"></div>
-                    <div class="tiempo">:</div>
-                    <div id="minutos" class="tiempo"></div>
-                    <div class="tiempo">:</div>
-                    <div id="segundos" class="tiempo"></div>
-                    <div class="tiempo"> | </div>
-                    <div id="dia" class="tiempo"></div>
-                    <div class="tiempo"> de </div>
-                    <div id="mes" class="tiempo"></div>
-                    <div class="tiempo"> del </div>
-                    <div id="year" class="tiempo"></div>
+                    <div id="hours" class="time"></div>
+                    <div class="time">:</div>
+                    <div id="minutes" class="time"></div>
+                    <div class="time">:</div>
+                    <div id="seconds" class="time"></div>
+                    <div class="time"> | </div>
+                    <div id="day" class="time"></div>
+                    <div class="time"> de </div>
+                    <div id="month" class="time"></div>
+                    <div class="time"> del </div>
+                    <div id="year" class="time"></div>
                 </div>
             </div>
-            <div class="cont_bottom" id="area_escritura">
+            <div class="cont_bottom" id="writing_area">
             </div>
         </div>
     </div>
