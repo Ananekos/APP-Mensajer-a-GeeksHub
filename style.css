@@ -355,13 +355,13 @@ iframe{
 
 /* Break points */
 
-@media (max-width: 769px) {
+@media (max-width: 920px) {
     #main_container{
         grid-template-columns: 35% 65%;
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 650px) {
     #main_container{
         margin:auto;
         height: 90%;
