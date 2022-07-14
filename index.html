@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <title>App GeeksHubs</title>
+</head>
+<body>
+
+    <div id="main_container">
+        <div id="left_container">
+            <div class="app_name">
+                <h1>Reto GeeksHubs</h1>
+                <table class="table_user">
+                    <tr>
+                        <td>
+                            <div class="conected_dot"></div>
+                        </td>
+                        <td>
+                            <div>
+                                <h4>Alumno@ BTC</h4>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="cont_channels">
+                <div class="cont_channels_tittle">
+                    <h2>Channels</h2>
+                    <button class="btn_add" id="btn_add_channels" onclick="creatingChannels()">
+                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                    </button>
+                </div>
+                
+                <ul id="channelsList">
+                </ul>
+                <hr>
+            </div>
+            <div class="_cont_messages">
+                <div class="cont_messages_tittle">
+                    <h2>Direct mensajes</h2>
+                    <button class="btn_add">
+                        <i class="fa fa-plus-circle"aria-hidden="true"></i>
+                    </button>
+                </div>
+               
+                <table class="table_user">
+                    <tr>
+                        <td>
+                            <div class="conected_dot"></div>
+                        </td>
+                        <td>
+                            <div>
+                                <h3>Olivia Montes</h3>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <table class="table_user">
+                    <tr>
+                        <td>
+                            <div class="conected_dot"></div>
+                        </td>
+                        <td>
+                            <div>
+                                <h3>Isabel Carballo</h3>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <table class="table_user">
+                    <tr>
+                        <td>
+                            <div class="disconected_dot"></div>
+                        </td>
+                        <td>
+                            <div>
+                                <h3>Javier Cuenca</h3>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <table class="table_user">
+                    <tr>
+                        <td>
+                            <div class="conected_dot"></div>
+                        </td>
+                        <td>
+                            <div>
+                                <h3>Peter Griffin</h3>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <hr>
+            </div>
+            <div class="apps_container">
+                <div class="apps_container_tittle"><h2>Apps</h2>
+                <button class="btn_add">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                </button></div>
+                
+            </div>
+        </div>
+        <div id="right_container">
+            <div id="head_container">
+            </div>
+            <div class="messages_area" id="messages_area">
+                <div class="animation" id="animation">
+                    <div class="start-text"><iframe src="https://embed.lottiefiles.com/animation/106068"></iframe>
+                        <div class="start_sentence">
+                            <p>Para comenzar, agrega un nuevo canal</p>
+                            <button class="btn_add_start" id="btn_add_channels" onclick="creatingChannels()">
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="search_result">
+                    <ul id="result" class="search_result">
+                        <li class="search_result"></li>
+                    </ul>
+                </div>
+                <div id="new_messages_area">
+                </div>
+                <div id="user_name" hidden><img src="IMG/iconito_1.png" class="user_icon">
+                    <d2>Alumno@ BTC</d2>
+                </div>
+                <div hidden>
+                    <div id="hours" class="time"></div>
+                    <div class="time">:</div>
+                    <div id="minutes" class="time"></div>
+                    <div class="time">:</div>
+                    <div id="seconds" class="time"></div>
+                    <div class="time"> | </div>
+                    <div id="day" class="time"></div>
+                    <div class="time"> de </div>
+                    <div id="month" class="time"></div>
+                    <div class="time"> del </div>
+                    <div id="year" class="time"></div>
+                </div>
+            </div>
+            <div class="cont_bottom" id="writing_area">
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <script src="script/script.js"></script>
+</body>
+</html>
